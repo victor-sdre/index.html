@@ -4,42 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All In or Nothing Coin (AION)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Estilos Personalizados -->
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #000;
             color: #fff;
-            text-align: center;
-            padding: 50px;
         }
-        h1 {
+        .navbar, .footer {
+            background-color: #111;
+        }
+        .btn-primary {
+            background-color: #FFD700;
+            border: none;
+            color: #000;
+        }
+        .btn-primary:hover {
+            background-color: #e6b800;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
             color: #FFD700;
         }
-        a {
-            color: #FFD700;
-            text-decoration: none;
+        .form-control {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #FFD700;
         }
-        a:hover {
-            text-decoration: underline;
+        .form-control:focus {
+            background-color: #333;
+            color: #fff;
+            border-color: #FFD700;
+            box-shadow: 0 0 5px #FFD700;
+        }
+        .animate-pop {
+            animation: pop 0.5s ease-in-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .navbar-brand img {
+            height: 40px; /* Ajuste o tamanho da logo conforme necessário */
         }
     </style>
 </head>
 <body>
-    <h1>All In or Nothing Coin (AION)</h1>
-    <p>A moeda dos que apostam tudo!</p>
-    <p><strong>Contrato:</strong> 0xSeuEnderecoDeContrato</p>
-    <p><strong>Compre AION no PancakeSwap:</strong> <a href="https://pancakeswap.finance" target="_blank">Clique aqui</a></p>
-    <h2>Roadmap</h2>
-    <ul style="list-style-type: none; padding: 0;">
-        <li>✅ Fase 1: Lançamento do token e listagem no PancakeSwap.</li>
-        <li>🛠️ Fase 2: Expansão da comunidade e parcerias.</li>
-        <li>🚀 Fase 3: Listagem em exchanges centralizadas.</li>
-    </ul>
-    <h2>Redes Sociais</h2>
-    <p>
-        <a href="https://twitter.com/aioncoin" target="_blank">Twitter</a> |
-        <a href="https://t.me/aioncoin" target="_blank">Telegram</a> |
-        <a href="https://discord.gg/aioncoin" target="_blank">Discord</a>
-    </p>
+    <!-- Cabeçalho -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/150x50" alt="Logo AION Coin"> <!-- Substitua pelo link da sua logo -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#roadmap">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tokenomics">Tokenomics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comunidade">Comunidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section class="text-center py-5">
+        <div class="container">
+            <h1 class="display-4 animate-pop">All In or Nothing Coin (AION)</h1>
+            <p class="lead">A moeda dos que apostam tudo!</p>
+            <a href="https://pancakeswap.finance" class="btn btn-primary btn-lg">Compre AION</a>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <h2>Sobre o Projeto</h2>
+            <p>A AION Coin é mais do que uma criptomoeda; é um símbolo de determinação e ambição. Criada para aqueles que estão dispostos a apostar tudo em seus sonhos, a AION Coin representa a mentalidade de quem não desiste, não importa o quão difícil seja o caminho.</p>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="py-5 bg-dark">
+        <div class="container">
+            <h2>Roadmap</h2>
+            <ul class="list-unstyled">
+                <li>✅ Fase 1: Lançamento do token e listagem no PancakeSwap.</li>
+                <li>🛠️ Fase 2: Expansão da comunidade e parcerias.</li>
+                <li>🚀 Fase 3: Listagem em exchanges centralizadas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tokenomics -->
+    <section id="tokenomics" class="py-5">
+        <div class="container">
+            <h2>Tokenomics</h2>
+            <p><strong>Fornecimento Total:</strong> 1.000.000.000 AION</p>
+            <p><strong>Taxa de Transação:</strong> 5% (2% redistribuição, 2% queimado, 1% marketing).</p>
+        </div>
+    </section>
+
+    <!-- Comunidade -->
+    <section id="comunidade" class="py-5 bg-dark">
+        <div class="container">
+            <h2>Comunidade</h2>
+            <p>Junte-se à nossa comunidade e faça parte dessa jornada!</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://twitter.com/aioncoin" class="btn btn-primary">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://t.me/aioncoin" class="btn btn-primary">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+                <a href="https://discord.gg/aioncoin" class="btn btn-primary">
+                    <i class="fab fa-discord"></i> Discord
+                </a>
+            </div>
+            <div class="mt-4">
+                <p class="counter">10,000+ Holders</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Inscreva-se para receber atualizações sobre o projeto:</p>
+            <form id="newsletterForm">
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Inscrever-se</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 AION Coin. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts Personalizados -->
+    <script>
+        // Simulação de contador de holders
+        const counterElement = document.querySelector('.counter');
+        let holders = 10000;
+        setInterval(() => {
+            holders += Math.floor(Math.random() * 10);
+            counterElement.textContent = `${holders.toLocaleString()}+ Holders`;
+        }, 3000);
+
+        // Animação ao enviar o formulário
+        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Obrigado por se inscrever!');
+        });
+    </script>
 </body>
 </html>
